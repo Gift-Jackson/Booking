@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Celebrity Online Bookings</title>
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="/assets/logo.png" type="image/x-icon" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/celebrity.css" />
+    <link rel="stylesheet" href="css/transition.css" />
+    <!-- FONT AWESOME -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- MATERIAL ICON -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <!-- AOS LINK -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="transition active">
+        <div class="transition-content">
+          <div class="spinner"></div>
+          <h3>Loading...</h3>
+        </div>
+      </div>
+    <header>
+      <div class="header-layer-1">
+        <a class="brand" href="index.html">
+          <i class="fa-solid fa-star"></i>
+          Celebrity Bookings
+        </a>
+        <a href="mailto:managementagencyy@gmail.com" target="_blank">
+          <button>
+            <i class="fa-regular fa-envelope"></i>
+            Contact Agent
+          </button>
+        </a>
+      </div>
+      <div class="header-layer-2">
+        <nav>
+          <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a class="current" href="/celebrities.html">Search</a></li>
+            <li><a href="/contact.html">Contacts</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div class="alt-section">
+      <main>
+        <div class="celebrity">
+          <div class="seach-bar">
+            <i class="fa-solid fa-search"></i>
+            <input type="text" id="search" placeholder="Search celebrity..." />
+          </div>
+
+          <div class="celebrity-container" id="celebrity-container"></div>
+        </div>
+      </main>
+    </div>
+
+    <footer>
+      <main>
+        <div class="footer-container" data-aos="fade-up" data-aos-delay="300">
+          <a href="/index.html">
+            <img
+              src="assets/logo.png"
+              alt="logo"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            />
+          </a>
+
+          <div class="quick-links" data-aos="fade-up" data-aos-delay="300">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="/index.html">Home</a></li>
+              <li><a href="/agent.html">Agent</a></li>
+              <li><a href="/fee.html">Fee Policy</a></li>
+              <li><a href="/contact.html">Contacts</a></li>
+            </ul>
+          </div>
+
+          <div class="newsletter" data-aos="fade-up" data-aos-delay="300">
+            <h3>Newsletter Sign Up</h3>
+            <small
+              >Subscribe to our newsletter and stay up to date with the latest
+              from us.</small
+            >
+            <form>
+              <input
+                type="email"
+                name="Email"
+                placeholder="Your Email Address..."
+                required
+              />
+              <button type="submit" class="news-btn">Sign Up</button>
+            </form>
+          </div>
+        </div>
+        <p>&copy; 2023 Fox Property Management LTD. All rights reserved.</p>
+      </main>
+    </footer>
+
+    <!-- Javascript -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="js/transition.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="js/celebrity.js"></script>
+    <script src="js/checkout.js"></script>
+  </body>
+</html>

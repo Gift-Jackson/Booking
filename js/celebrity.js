@@ -1,0 +1,131 @@
+const celebrities = [
+    {
+        id: 0,
+        image: "/assets/paul wesley.webp",
+        name: "Paul Wesley",
+        country: "New Jersey",
+        role: "Actor, Director, and Producer"
+    },
+    {
+        id: 1,
+        image: "/assets/dwanye johnson.webp",
+        name: "Dwayne Johnson",
+        country: "California",
+        role: "Actor and Wrestler"
+    },
+    {
+        id: 2,
+        image: "/assets/nick Jonas.jpg",
+        name: "Nick Jonas",
+        country: "USA",
+        role: "Actor and singer"
+    },
+   
+    {
+        id: 3,
+        image: "/assets/zendaya.webp",
+        name: "Zendaya Coleman",
+        country: "California",
+        role: "Actress"
+    },
+    {
+        id: 4,
+        image: "/assets/James-Bond.webp",
+        name: "Daniel Craig",
+        country: "Chester",
+        role: "Actor"
+    },
+    {
+        id: 5,
+        image: "/assets/johnny depp.webp",
+        name: "John Christopher Depp II",
+        country: "Kentucky",
+        role: "Actor"
+    },
+    {
+        id: 6,
+        image: "/assets/nico.webp",
+        name: "Nicholas Galitzine",
+        country: "London",
+        role: "Actor"
+    },
+    {
+        id: 7,
+        image: "/assets/michele.webp",
+        name: "Michele Morrone",
+        country: "Bitonto",
+        role: "Actor and Singer"
+    },
+    {
+        id: 8,
+        image: "/assets/levi.webp",
+        name: "Zachary Levi Pugh",
+        country: "Louisiana",
+        role: "Actor"
+    },
+    {
+        id: 9,
+        image: "/assets/Joseph.webp",
+        name: "Joseph Morgan",
+        country: "London",
+        role: "Actor"
+    },
+];
+
+const categories = [...new Set(celebrities.map((item) => {
+    return item
+}))];
+
+const searchBar = document.getElementById("search");
+searchBar.addEventListener("keyup", (e) => {
+    const searchData = e.target.value.toLowerCase();
+    
+    const filterData = celebrities.filter((item) => {
+        return item.name.toLowerCase().includes(searchData);
+    });
+
+    displayItem(filterData);
+});
+
+const displayItem = (items) => {
+    const celebrityContainer = document.querySelector(".celebrity-container");
+
+    if (items.length === 0) {
+        celebrityContainer.innerHTML = `
+            <h3 class="no-result">No results found!</h3>
+        `;
+    } else {
+        celebrityContainer.innerHTML = items.map((item) => {
+            var { image, name, role, country } = item;
+            return (
+                `
+                <div class="celebrity-box" data-aos="zoom-in">
+                    <img src="${image}" alt="${name}" />
+                    <div class="profile">
+                        <h3 class="name">${name}</h3>
+                        <p class="role">${role}</p>
+                        <p class="nationality">${country}</p>
+                    </div>
+                    <button class="checkout-btn" onclick="book(${item.id})">Book Now!</button>
+                </div>
+                `
+            );
+        }).join('');
+    }
+};
+
+displayItem(categories)
+
+function book(itemId) {
+    // Retrieve the selected product based on the itemId
+    const selectedCelebrity = celebrities.find(celebrity => celebrity.id === itemId);
+
+    // Save the selected product to local storage
+    localStorage.setItem("selectedCelebrity", JSON.stringify(selectedCelebrity));
+
+    window.location.href = "/checkout.html";
+}
+
+
+
+

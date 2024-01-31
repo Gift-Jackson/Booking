@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Celebrity Online Bookings</title>
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="/assets/logo.png" type="image/x-icon" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/celebrity.css" />
+    <link rel="stylesheet" href="css/transition.css" />
+    <!-- FONT AWESOME -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- MATERIAL ICON -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <!-- AOS LINK -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- SIGNATURE API -->
+    <script src="https://cdn.jsdelivr.net/npm/signature_pad"></script>
+  </head>
+  <body>
+    <div class="transition active">
+      <div class="transition-content">
+        <div class="spinner"></div>
+        <h3>Loading...</h3>
+      </div>
+    </div>
+    <header>
+      <div class="header-layer-1">
+        <a class="brand" href="index.html">
+          <i class="fa-solid fa-star"></i>
+          Celebrity Bookings
+        </a>
+        <a href="mailto:managementagencyy@gmail.com" target="_blank">
+          <button>
+            <i class="fa-regular fa-envelope"></i>
+            Contact Agent
+          </button>
+        </a>
+      </div>
+      <div class="header-layer-2">
+        <nav>
+          <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/celebrities.html">Search</a></li>
+            <li><a href="/contact.html">Contacts</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section
+      class="about-section alt-section-2 alt-section-3 checkout"
+      id="about"
+    >
+      <main>
+        <div class="about-container align-start">
+          <div class="col col-1" data-aos="fade-up" data-aos-delay="300">
+            <div class="profile-container">
+              <div class="profile-img">
+                <img
+                  class="celebrityImage"
+                  src="assets/nick Jonas.jpg"
+                  alt="villa_about_svg"
+                />
+              </div>
+              <h3 class="celebrityName" style="margin-bottom: .5rem; color:var(--main-color);"></h3>
+              <p class="celebrityRole"></p>
+              <p class="celebrityCountry"></p>
+            </div>
+          </div>
+          <div class="col col-2" data-aos="fade-up" data-aos-delay="300">
+            <div class="title">
+              <h3>Book a <span class="highlight">Session</span></h3>
+              <small>Complete the form to secure an appointment—</small>
+            </div>
+            <div class="form-container">
+              <form id="bookingform" action="https://formsubmit.io/send/ec45eae4-ac2d-4398-bc60-8a51617f7ea5" method="POST">
+                <input name="_redirect" type="hidden" id="hide" value="https://mycelebrityonlinebookings.netlify.app/checkout-success.html">
+                <div class="input-control">
+                  <label for="name">Fullname:</label>
+                  <input type="text" id="name" name="name" required />
+                </div>
+                <div class="input-control">
+                  <label for="email">E-mail Address:</label>
+                  <input type="email" id="email" name="email" required />
+                </div>
+                <div class="input-control">
+                  <label for="tel">Phone Number:</label>
+                  <input type="tel" id="tel" name="tel" required />
+                </div>
+                <div class="input-control">
+                  <label for="address">Contact Home Address:</label>
+                  <input type="text" id="address" name="address" required />
+                </div>
+                <div class="input-control">
+                  <label for="country">Nationality:</label>
+                  <input type="text" id="country" name="country" required />
+                </div>
+                <div class="input-control">
+                  <label for="celebrityInput">Celebrity:</label>
+                  <input
+                    type="text"
+                    id="celebrityInput"
+                    name="celebrity"
+                    readonly
+                  />
+                </div>
+                <div class="input-control">
+                  <label for="event">Event:</label>
+                  <select name="event" id="event">
+                    <option value="Personal">Personal</option>
+                    <option value="Live Concert">Live Concert</option>
+                    <option value="Wedding">Wedding Party</option>
+                    <option value="Other">Others</option>
+                  </select>
+                </div>
+                <div class="input-control">
+                  <label for="budget">Budget ($):</label>
+                  <input type="text" name="budget" id="budget" />
+                </div>
+                <div class="input-control">
+                  <label for="message">Message:</label>
+                  <textarea
+                    name="message"
+                    id="message"
+                    cols="30"
+                    rows="5"
+                  ></textarea>
+                </div>
+                <div class="input-control">
+                  <label for="signature">Signature</label>
+                  <canvas
+                    id="signature-pad"
+                    class="signatureCanvas"
+                    height="100"
+                    style="touch-action: none"
+                  ></canvas>
+                </div>
+                <button type="submit">
+                    Submit
+                  <!-- Next Step
+                  <i
+                    class="fa-solid fa-arrow-right"
+                    style="color: var(--white)"
+                  ></i> -->
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </main>
+    </section>
+
+    <footer>
+      <main>
+        <div class="footer-container" data-aos="fade-up" data-aos-delay="300">
+          <a href="/index.html">
+            <img
+              src="assets/logo.png"
+              alt="logo"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            />
+          </a>
+
+          <div class="quick-links" data-aos="fade-up" data-aos-delay="300">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="/index.html">Home</a></li>
+              <li><a href="/agent.html">Agent</a></li>
+              <li><a href="/fee.html">Fee Policy</a></li>
+              <li><a href="/contact.html">Contacts</a></li>
+            </ul>
+          </div>
+
+          <div class="newsletter" data-aos="fade-up" data-aos-delay="300">
+            <h3>Newsletter Sign Up</h3>
+            <small
+              >Subscribe to our newsletter and stay up to date with the latest
+              from us.</small
+            >
+            <form>
+              <input
+                type="email"
+                name="Email"
+                placeholder="Your Email Address..."
+                required
+              />
+              <button type="submit" class="news-btn">Sign Up</button>
+            </form>
+          </div>
+        </div>
+        <p>&copy; 2023 Fox Property Management LTD. All rights reserved.</p>
+      </main>
+    </footer>
+
+    <!-- Javascript -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="js/transition.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="js/celebrity.js"></script>
+    <script src="js/checkout.js"></script>
+    <script>
+      var canvas = document.getElementById("signature-pad");
+      var signaturePad = new SignaturePad(canvas);
+    </script>
+  </body>
+</html>
