@@ -1,0 +1,82 @@
+:root {
+    --main-color: #ff4500;
+    --light-color: #4a4a4a;
+    --light-bg: #f5f5f5;
+    --white: #fff;
+    --black: #303030;
+    --border: .1rem solid var(--light-color);
+    --box-shodow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+}
+
+.celebrity{
+    width: 700px;
+    margin: 0 auto 3rem;
+}
+
+.seach-bar{
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+.seach-bar:focus-within{
+    outline: 2px solid var(--main-color);
+    outline-offset: 2px;
+}
+
+.seach-bar input{
+    width: 100%;
+    background-color: transparent;
+    caret-color: var(--main-color);
+}
+
+.celebrity-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.celebrity-box{
+    padding: 1rem;
+    background-color: var(--white);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+}
+.celebrity-box img{
+    width: 100%;
+}
+
+.celebrity-box h3{
+    margin-bottom: .5rem;
+}
+.celebrity-box button{
+    padding: .5rem 1rem;
+    background-color: var(--main-color);
+    color: var(--white);
+    width: 100%;
+    transition: .2s;
+}
+.celebrity-box button:hover{
+    background-color: var(--black);
+}
+
+.celebrity-box button:active{
+    transform: scale(.9);
+}
+.checkout{
+    margin-bottom: 3rem;
+}
+
+@media screen and (max-width:800px){
+    .celebrity{
+        width: 100%;
+    }
+    .alt-section {
+        padding-top: 100px;
+    }
+}
