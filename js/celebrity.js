@@ -70,6 +70,20 @@ const celebrities = [
         country: "London",
         role: "Actor"
     },
+    {
+        id: 10,
+        image: "/assets/channing tatum.webp",
+        name: "Channing Tatum",
+        country: "Alabama",
+        role: "Actor"
+    },
+    {
+        id: 11,
+        image: "/assets/Cole Sprouse.jpg",
+        name: "Cole Sprouse",
+        country: "Arezzo, Italy",
+        role: "Actor and Photographer"
+    },
 ];
 
 const categories = [...new Set(celebrities.map((item) => {
@@ -117,10 +131,8 @@ const displayItem = (items) => {
 displayItem(categories)
 
 function book(itemId) {
-    // Retrieve the selected product based on the itemId
     const selectedCelebrity = celebrities.find(celebrity => celebrity.id === itemId);
 
-    // Save the selected product to local storage
     localStorage.setItem("selectedCelebrity", JSON.stringify(selectedCelebrity));
 
     window.location.href = "/checkout.html";

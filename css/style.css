@@ -605,6 +605,10 @@ label {
 .align-start{
     align-items: start;
 }
+#currentYear{
+    color: var(--white);
+}
+
 
 /* Responsiveness */
 @media screen and (max-width:800px) {
