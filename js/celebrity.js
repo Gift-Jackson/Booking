@@ -91,6 +91,13 @@ const celebrities = [
         country: "USA",
         role: "Actor"
     },
+    {
+        id: 13,
+        image: "/assets/Kenny Chesney.jpg",
+        name: "Kenny Chesney",
+        country: "USA",
+        role: "Musician"
+    },
 ];
 
 const categories = [...new Set(celebrities.map((item) => {
