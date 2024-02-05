@@ -84,6 +84,13 @@ const celebrities = [
         country: "Arezzo, Italy",
         role: "Actor and Photographer"
     },
+    {
+        id: 12,
+        image: "/assets/Matthew McConaughey.jpg",
+        name: "Matthew McConaughey",
+        country: "USA",
+        role: "Actor"
+    },
 ];
 
 const categories = [...new Set(celebrities.map((item) => {
