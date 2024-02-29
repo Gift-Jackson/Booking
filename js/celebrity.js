@@ -98,6 +98,20 @@ const celebrities = [
         country: "USA",
         role: "Musician"
     },
+    {
+        id: 14,
+        image: "/assets/billy burke.jpg",
+        name: "Billy Burke",
+        country: "USA",
+        role: "Actor"
+    },
+    {
+        id: 15,
+        image: "/assets/hugh jackman.jpg",
+        name: "Hugh Jackman",
+        country: "Austrialia",
+        role: "Actor"
+    },
 ];
 
 const categories = [...new Set(celebrities.map((item) => {
