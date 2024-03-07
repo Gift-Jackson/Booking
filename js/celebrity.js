@@ -112,6 +112,13 @@ const celebrities = [
         country: "Austrialia",
         role: "Actor"
     },
+    {
+        id: 16,
+        image: "../assets/Elizabeth Hurley.jpg",
+        name: "Elizabeth Hurley",
+        country: "United Kingdom",
+        role: "Actress and Model"
+    },
 ];
 
 const categories = [...new Set(celebrities.map((item) => {
