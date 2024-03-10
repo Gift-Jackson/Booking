@@ -119,6 +119,13 @@ const celebrities = [
         country: "United Kingdom",
         role: "Actress and Model"
     },
+    {
+        id: 17,
+        image: "../assets/Coco Gauff.jpeg",
+        name: "Coco Gauff",
+        country: "USA",
+        role: "Tennis Player"
+    },
 ];
 
 const categories = [...new Set(celebrities.map((item) => {
