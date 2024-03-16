@@ -126,6 +126,13 @@ const celebrities = [
         country: "USA",
         role: "Tennis Player"
     },
+    {
+        id: 18,
+        image: "../assets/Mark Harmon.jpg",
+        name: "Mark Harmon",
+        country: "USA",
+        role: "Actor"
+    },
 ];
 
 const categories = [...new Set(celebrities.map((item) => {
