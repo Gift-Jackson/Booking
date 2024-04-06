@@ -121,13 +121,20 @@ const celebrities = [
     },
     {
         id: 17,
+        image: "../assets/Jenna Ortega.jpg",
+        name: "Jenna Ortega",
+        country: "USA",
+        role: "Actress"
+    },
+    {
+        id: 18,
         image: "../assets/Coco Gauff.jpeg",
         name: "Coco Gauff",
         country: "USA",
         role: "Tennis Player"
     },
     {
-        id: 18,
+        id: 19,
         image: "../assets/Mark Harmon.jpg",
         name: "Mark Harmon",
         country: "USA",
