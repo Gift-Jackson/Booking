@@ -100,41 +100,48 @@ const celebrities = [
     },
     {
         id: 14,
+        image: "/assets/Luke Combs.jpg",
+        name: "Luke Combs",
+        country: "USA",
+        role: "Musician"
+    },
+    {
+        id: 15,
         image: "/assets/billy burke.jpg",
         name: "Billy Burke",
         country: "USA",
         role: "Actor"
     },
     {
-        id: 15,
+        id: 16,
         image: "/assets/hugh jackman.jpg",
         name: "Hugh Jackman",
         country: "Austrialia",
         role: "Actor"
     },
     {
-        id: 16,
+        id: 17,
         image: "../assets/Elizabeth Hurley.jpg",
         name: "Elizabeth Hurley",
         country: "United Kingdom",
         role: "Actress and Model"
     },
     {
-        id: 17,
+        id: 18,
         image: "../assets/Jenna Ortega.jpg",
         name: "Jenna Ortega",
         country: "USA",
         role: "Actress"
     },
     {
-        id: 18,
+        id: 19,
         image: "../assets/Coco Gauff.jpeg",
         name: "Coco Gauff",
         country: "USA",
         role: "Tennis Player"
     },
     {
-        id: 19,
+        id: 20,
         image: "../assets/Mark Harmon.jpg",
         name: "Mark Harmon",
         country: "USA",
