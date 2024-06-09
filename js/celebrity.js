@@ -147,6 +147,13 @@ const celebrities = [
         country: "USA",
         role: "Actor"
     },
+    {
+        id: 21,
+        image: "../assets/simon cowell.jpg",
+        name: "Simon Cowell",
+        country: "United Kingdom",
+        role: "TV Presenter, Music Director, Enterpreneur"
+    },
 ];
 
 const categories = [...new Set(celebrities.map((item) => {
