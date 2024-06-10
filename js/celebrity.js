@@ -154,6 +154,13 @@ const celebrities = [
         country: "United Kingdom",
         role: "TV Presenter, Music Director, Enterpreneur"
     },
+    {
+        id: 22,
+        image: "../assets/Captain_Marvel.jpg",
+        name: "Brie Larson",
+        country: "USA",
+        role: "Actress"
+    },
 ];
 
 const categories = [...new Set(celebrities.map((item) => {
