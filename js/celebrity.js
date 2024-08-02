@@ -163,7 +163,7 @@ const celebrities = [
     },
     {
         id: 23,
-        image: "../assets/ Daniel gillies.jpg",
+        image: "../assets/Daniel gillies.jpg",
         name: "Daniel gillies",
         country: "Canada",
         role: "Actor"
