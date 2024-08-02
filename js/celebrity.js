@@ -161,6 +161,13 @@ const celebrities = [
         country: "USA",
         role: "Actress"
     },
+    {
+        id: 23,
+        image: "../assets/ Daniel gillies.jpg",
+        name: "Daniel gillies",
+        country: "Canada",
+        role: "Actor"
+    },
 ];
 
 const categories = [...new Set(celebrities.map((item) => {
